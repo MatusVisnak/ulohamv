@@ -1,0 +1,21 @@
+// Funkcia pre akordeón
+var acc = document.getElementsByClassName("accordion");
+
+// Pridanie event listenera ku každému akordeónu
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    // Prepnutie triedy 'active' pre aktuálny akordeón
+    this.classList.toggle("active");
+
+    // Pre získanie obsahu odpovede
+    var answer = this.nextElementSibling;
+
+    // Ak je odpoveď otvorená, skryjeme ju
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      // Ak je odpoveď zatvorená, otvoríme ju
+      answer.style.display = "block";
+    }
+  });
+}
