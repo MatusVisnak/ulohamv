@@ -1,0 +1,47 @@
+/* Základné štýly pre akordeón */
+.accordion {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+/* Akordeón pri kliknutí alebo hover */
+.accordion.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Skrytý obsah akordeónu */
+.answer {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Akordeónové otázky a odpovede v rôznych štýloch */
+.accordion:before {
+    content: '\002B'; /* Pridáme znak "+" pred otázkou */
+    font-size: 20px;
+    color: #777;
+    float: left;
+    margin-left: -20px;
+    margin-top: 5px;
+}
+
+.accordion.active:before {
+    content: "\2212"; /* Znak "-" pri otvorenom akordeóne */
+    font-size: 20px;
+}
+
+.accordion + .answer {
+    padding-left: 30px; /* Odstup od okraja */
+}
